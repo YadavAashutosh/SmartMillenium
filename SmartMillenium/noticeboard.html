@@ -1,0 +1,155 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Notice Board</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F4F9; /* Light grey background */
+            color: #333; /* Dark text color for readability */
+            padding: 20px;
+        }
+        .notice-board {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff; /* White background for the notice board */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333; /* Dark grey for headings */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #333; /* Dark text for subheadings */
+            margin: 10px 0;
+            border-bottom: 2px solid #E0E0E0; /* Light grey underline for emphasis */
+            padding-bottom: 5px;
+        }
+        .notice {
+            background-color: #D9D9D9; /* Light grey for notices */
+            color: #333; /* Dark text color */
+            margin: 10px 0;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .notice:hover {
+            transform: scale(1.02); /* Slight zoom effect on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .notice h4 {
+            margin: 0;
+            color: #2C2C2C; /* Darker text for notice titles */
+        }
+        .notice-date {
+            font-size: 12px;
+            color: #666; /* Grey for the date */
+            text-align: right;
+        }
+        .content {
+            display: none;
+            padding: 10px 0;
+            background-color: #e7f3ff; /* Light blue background for content */
+            border-radius: 5px;
+        }
+        .accordion {
+            background-color: #A6A6A6; /* Medium grey for accordion headers */
+            color: white;
+            margin: 10px 0;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .accordion:hover {
+            background-color: #8B8B8B; /* Darker grey on hover */
+        }
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+        .slider::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        .slider .notice {
+            min-width: 250px; /* Width of each card */
+            margin-right: 15px; /* Space between cards */
+        }
+        .icon {
+            margin-right: 8px;
+        }
+    </style>
+    <script>
+        function toggleNotice(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+
+<div class="notice-board">
+    <h2>📢 Community Notice Board</h2>
+    
+    <!-- Accordion Notices -->
+    <div class="accordion" onclick="toggleNotice(this)">
+        <span class="icon">📅</span>
+        <strong>Upcoming Events</strong>
+    </div>
+    <div class="content">
+        <p>Join us for the community picnic on April 10th, 2024!</p>
+        <div class="notice-date">Posted on: March 5, 2024</div>
+    </div>
+    <div class="accordion" onclick="toggleNotice(this)">
+        <span class="icon">⚠️</span>
+        <strong>Important Announcement</strong>
+    </div>
+    <div class="content">
+        <p>The community center will be closed for renovations from April 1st to April 15th.</p>
+        <div class="notice-date">Posted on: March 10, 2024</div>
+    </div>
+
+    <!-- Floating Notice Cards -->
+    <h3>📌 Important Notices</h3>
+    <div class="notice">
+        <h4>Food Drive</h4>
+        <p>We are collecting non-perishable food items for the local food bank.</p>
+        <div class="notice-date">Posted on: March 2, 2024</div>
+    </div>
+    <div class="notice">
+        <h4>Pet Adoption Fair</h4>
+        <p>Visit us on March 30th to adopt a pet and give them a loving home!</p>
+        <div class="notice-date">Posted on: March 15, 2024</div>
+    </div>
+
+    <!-- Slider for Recent Notices -->
+    <h3>🔔 Recent Notices</h3>
+    <div class="slider">
+        <div class="notice">
+            <h4>Spring Festival</h4>
+            <p>Join us for the Spring Festival on April 5th, 2024, at the community park.</p>
+            <div class="notice-date">Posted on: March 15, 2024</div>
+        </div>
+        <div class="notice">
+            <h4>Health Awareness Camp</h4>
+            <p>Free health check-ups on March 22nd, 2024, at the community center.</p>
+            <div class="notice-date">Posted on: March 10, 2024</div>
+        </div>
+        <div class="notice">
+            <h4>Yoga Classes</h4>
+            <p>Join us for yoga classes every Saturday morning!</p>
+            <div class="notice-date">Posted on: March 12, 2024</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

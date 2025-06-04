@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSociety - Digital Living Society</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <nav>
+        <div class="logo">Smart Millenium</div>
+        <ul>
+            <li><button onclick="showHome()">Home</button></li>
+            <li><button onclick="showListings()">Listings</button></li>
+            <li><button onclick="showReport()">Report Issue</button></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <b>
+            <h1 style="font-style: oblique;">Welcome to Smart Millenium!</h1>
+        </b>
+        <br>
+        <p style="font-size: medium;">
+            The ultimate platform for seamless home rental management and efficient handling of community issues.<br>
+            Simplify your rental process, report maintenance needs, and stay connected with your community all in one place.
+        </p>
+        <img src="p1.jpg" alt="Landscape Image" style="width: 100%; height: 400px; object-fit: cover; display: block; margin: 0; padding: 0;">
+
+        <div class="container">
+            <div class="text">
+                <h1>Available Listings: Rentable and Unrentable Homes! 🏠</h1>
+                <p>
+                    Explore our available listings for rentable homes! Whether you're looking for a cozy apartment or a spacious house, our listings provide detailed information about each property, including location, rent, and amenities. Use the search filter to quickly find the perfect home that suits your needs and preferences. Our listings are updated regularly to ensure you have access to the latest and best options available. Find your next home with ease and convenience!
+                </p>
+                <button class="btn" onclick="showListings()">View Listings</button>
+            </div>
+            <div class="image">
+                <img src="p2.jpg" alt="Smart Millenium Image">
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="image">
+                <img src="p3.jpg" alt="Smart Millenium Image">
+            </div>
+            <div class="text">
+                <h1>Welcome to Report an Issue Portal 🛠️</h1>
+                Here, you can quickly and easily report any concerns or problems within your home or the community.
+                Whether it's a maintenance request, an issue with utilities, or a neighborhood concern, we're here to help.
+                Your report will be addressed promptly to ensure a comfortable and safe living environment. 
+                Thank you for helping us maintain a high standard of living in our society!<br>
+               <br><br> <button class="btn" onclick="showReport()">Report an Issue</button>
+            </div>
+        </div>
+        <hr>
+
+        <section id="features">
+            <div class="container">
+                
+                <div class="text">
+                    <h1>Welcome to the  Portal! 🔑</h1>
+                    <p>Welcome to the Resident Portal! This is your personal space to manage and view your information within the society. You can update your details, check your pending bills, and keep track of your service requests. The portal is designed to make your life easier by providing all essential information at your fingertips. Thank you for being a valued member of our community!</p>
+                    <button class="btn" onclick="showResidentPortal()">Resident Portal</button>
+                    <a href="adminlogin.html" class="btn">Admin Portal</a>
+                </div>
+                <div class="image">
+                    <img src="p4.jpeg" alt="Smart Millenium Features">
+                </div>
+            </div>
+        </section>
+    
+<hr>
+        <section id="features">
+            <div class="container">
+                <div class="image">
+                    <img src="p5.jpg" alt="Smart Millenium Features">
+                </div>
+                <div class="text">
+                    <h1>Welcome to the Notice Board!</h1>
+                    <p>This is your go-to place for all community updates, important announcements, and events. Stay informed about activities happening in your society, including meetings, clean-up days, maintenance schedules, and more. Your participation helps us build a better community!</p>
+                     <button class="btn" onclick="showNoticeBoard()">Notice Board</button>
+                </div>
+            
+            </div>
+        </section>
+        <hr>
+
+        <section id="contact">
+            <h2>Contact Us 📞</h2>
+            <p>Want to learn more about Smart Millenium? Get in touch with us at <a href="mailto:info@smartsociety.com">info@smartsociety.com</a></p>
+        </section>
+    </section>
+    
+
+    <hr>
+
+
+    <div id="content">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <!-- Notice Board Section -->
+    <div id="notice-board">
+        <h2>Notice Board 📝</h2>
+        <div class="notice">
+            <h3>Community Clean-Up Day</h3>
+            <p>Join us for a community clean-up day on Saturday, March 15th, 2024. Let's work together to keep our community clean and beautiful!</p>
+            <div class="notice-date">Posted on: March 1, 2024</div>
+        </div>
+        <div class="notice">
+            <h3>Monthly Meeting</h3>
+            <p>The monthly residents meeting will be held on March 20th, 2024, at 5 PM in the community center. All residents are encouraged to attend.</p>
+            <div class="notice-date">Posted on: March 5, 2024</div>
+        </div>
+        <div class="notice">
+            <h3>Maintenance Schedule</h3>
+            <p>Please be informed that maintenance work will take place from March 25th to March 27th, 2024. Water supply may be interrupted during this period.</p>
+            <div class="notice-date">Posted on: March 10, 2024</div>
+        </div>
+        <button class="btn-back" onclick="hideNoticeBoard()">Close Notice Board</button>
+    </div>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>
